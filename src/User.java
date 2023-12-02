@@ -67,17 +67,15 @@ public abstract class User implements Serializable {
         ++this.age;
     }
 
-    public String toString() {
-        String var10000 = this.name;
-        return "name='" + var10000 + "', id=" + this.id + ", email='" + this.email + "', age=" + this.age + ", gender=" + String.valueOf(this.gender);
-    }
-
     public int getAge() {
         return this.age;
     }
 
     public String getEmail() {
         return this.email;
+    }
+    public void setEmail(String newEmail){
+        this.email = newEmail;
     }
 
     public int getID() {
@@ -111,4 +109,8 @@ public abstract class User implements Serializable {
             System.out.println("Message sent to " + recipient.getName());
         }
     }
+    public String toString() {
+        return "name= " + name + "  " + "id= " + this.id +  "  " +"email= " + this.email + "age= " + this.age +"  " + "gender= " + String.valueOf(this.gender) +"  ";
+    }
+
 }
